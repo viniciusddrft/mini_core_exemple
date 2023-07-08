@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'interfaces/i_service_web.dart';
-import '../data/repository.dart';
+import 'interfaces/i_service_req_web.dart';
+import '../data/service_request_web.dart';
 import 'home_state.dart';
 
 class HomeInteractor extends ValueNotifier<HomeState> {
