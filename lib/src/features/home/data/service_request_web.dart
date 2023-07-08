@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'package:minicore_exemple/src/features/home/interactor/car_entity.dart';
 import 'package:http/http.dart' as http;
-import '../interactor/interfaces/i_service_req_web.dart';
+
+import '../interactor/interfaces/i_service_request_web.dart';
 
 class ServiceRequestWeb implements IServiceRequest {
   @override
