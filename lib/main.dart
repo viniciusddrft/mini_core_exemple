@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'src/features/home/ui/home_page.dart';
+import 'src/features/car/ui/home_page.dart';
 
 void main() {
   runApp(const MyApp());
