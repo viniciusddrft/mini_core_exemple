@@ -9,12 +9,8 @@ class CarInteractor extends ValueNotifier<CarState> {
   final IServiceRequest repository;
 
   void loadCars() async {
-    try {
-      value = CarLoading();
-      final cars = await repository.getCars();
-      value = CarSuccess(cars);
-    } catch (e) {
-      value = CarFailed(e.toString());
-    }
+    value = CarLoading();
+    final newState = await repository.getCars();
+    value = newState;
   }
 }

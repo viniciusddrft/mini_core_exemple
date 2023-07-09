@@ -1,5 +1,5 @@
-import '../car_entity.dart';
+import '../car_state.dart';
 
 abstract interface class IServiceRequest {
-  Future<List<CarEntity>> getCars();
+  Future<CarState> getCars();
 }
