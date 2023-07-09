@@ -31,12 +31,15 @@ class _CarPageState extends State<CarPage> {
       ),
       body: switch (value) {
         CarFailed(message: String message) => Center(
+            key: const Key('CarFailedState'),
             child: Text(message),
           ),
         CarLoading() => const Center(
+            key: Key('CarLoadingState'),
             child: CircularProgressIndicator(),
           ),
         CarSuccess(cars: List<CarEntity> cars) => ListView.builder(
+            key: const Key('CarSuccessState'),
             itemCount: cars.length,
             itemBuilder: (context, index) => Text(cars[index].name),
           ),
