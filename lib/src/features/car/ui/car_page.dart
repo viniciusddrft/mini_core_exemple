@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 import '../data/service_request_web.dart';
 import '../interactor/car_entity.dart';
@@ -12,7 +13,7 @@ class CarPage extends StatefulWidget {
 }
 
 class _CarPageState extends State<CarPage> {
-  final carInteractor = CarInteractor(ServiceRequestWeb());
+  final carInteractor = CarInteractor(ServiceRequestWeb(Client()));
 
   @override
   void initState() {
