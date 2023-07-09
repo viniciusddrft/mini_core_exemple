@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+import 'package:minicore_exemple/src/features/car/data/service_request_web.dart';
+import 'package:minicore_exemple/src/features/car/ui/car_provider.dart';
 
+import 'src/features/car/interactor/car_interactor.dart';
 import 'src/features/car/ui/car_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    CarProvider(
+      carInteractor: CarInteractor(ServiceRequestWeb(Client())),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
