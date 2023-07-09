@@ -1,7 +1,7 @@
-class CarEntipy {
+class CarEntity {
   final String name, code;
 
-  CarEntipy.fromJson(Map<String, dynamic> json)
+  CarEntity.fromJson(Map<String, dynamic> json)
       : code = json['codigo'],
         name = json['nome'];
 }
