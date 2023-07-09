@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
@@ -15,7 +14,8 @@ class ServiceRequestWeb implements IServiceRequest {
   @override
   Future<CarState> getCars() async {
     try {
-      final response = await client.get(Uri.parse('https://parallelum.com.br/fipe/api/v1/carros/marcas'));
+      final response = await client.get(
+          Uri.parse('https://parallelum.com.br/fipe/api/v1/carros/marcas'));
 
       final List<CarEntity> cars = [];
 
