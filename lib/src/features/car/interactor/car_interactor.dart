@@ -4,13 +4,13 @@ import 'car_state.dart';
 import 'interfaces/i_service_request_web.dart';
 
 class CarInteractor extends ValueNotifier<CarState> {
-  CarInteractor(this.repository) : super(CarLoading());
+  CarInteractor(this.serviceRequest) : super(CarLoading());
 
-  final IServiceRequest repository;
+  final IServiceRequest serviceRequest;
 
   void loadCars() async {
     value = CarLoading();
-    final newState = await repository.getCars();
+    final newState = await serviceRequest.getCars();
     value = newState;
   }
 }

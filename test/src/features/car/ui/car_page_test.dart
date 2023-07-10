@@ -6,14 +6,15 @@ import 'package:minicore_exemple/src/features/car/interactor/interfaces/i_servic
 import 'package:minicore_exemple/src/features/car/ui/car_page.dart';
 import 'package:minicore_exemple/src/features/car/ui/car_provider.dart';
 
-class CarInteractorMock extends ValueNotifier<CarState> implements CarInteractor {
+class CarInteractorMock extends ValueNotifier<CarState>
+    implements CarInteractor {
   CarInteractorMock() : super(CarLoading());
 
   @override
   void loadCars() {}
 
   @override
-  IServiceRequest get repository => throw UnimplementedError();
+  IServiceRequest get serviceRequest => throw UnimplementedError();
 }
 
 void main() {
